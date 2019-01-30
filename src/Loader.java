@@ -6,7 +6,7 @@
 
 public class Loader
 {
-    private static Integer findAmmountInText (String text, int startPoint)
+    private static Integer findAmountInText (String text, int startPoint)
     {
         char ch;
         Integer a;
@@ -23,8 +23,8 @@ public class Loader
             return a;
     }
 
-//0 - 48
-//9 - 57
+// код '0' - 48
+//код '9' - 57
 // space - 32
 
 //первое вхождение - 20
@@ -33,10 +33,10 @@ public class Loader
 
     public static void main(String[] args)
     {
-        String text = "Вася заработал 333 рублей, Петя - 7563 рубля, а Маша - 111 рублей";
+        String text = "Вася заработал 858 рублей, Петя - 7563 рубля, а Маша - 2 рублей";
         String str = "руб";
-        int vasya = findAmmountInText(text,text.indexOf(str));
-        int masha = findAmmountInText(text,text.lastIndexOf(str));
+        int vasya = findAmountInText(text,text.indexOf(str));
+        int masha = findAmountInText(text,text.lastIndexOf(str));
         System.out.println("Зарплата Васи и Маши: " + (vasya + masha));
     }
 }
